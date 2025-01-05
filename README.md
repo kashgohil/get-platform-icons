@@ -1,15 +1,16 @@
 # get-platform-icons
 
-To install dependencies:
+get icons for the platform
 
-```bash
-bun install
-```
+## to run this script:
 
-To run:
+first, you need to have a list of `Platform`, where:
 
-```bash
-bun run index.ts
-```
+<code>
+interface Platform {
+  name: string;
+  url: string;
+}
+</code>
 
-This project was created using `bun init` in bun v1.1.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+then, use `scrapeIcons` function and pass the `platforms` as argument. It should create a directory named `icons`, with icons created using `platform.name`.
